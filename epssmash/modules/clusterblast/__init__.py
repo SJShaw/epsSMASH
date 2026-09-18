@@ -28,6 +28,7 @@ from antismash.modules.clusterblast import (
     get_result_limit,
     load_clusterblast_database,
     prepare_single_database,
+    regenerate_previous_results,
     will_handle,
 )
 from antismash.modules.clusterblast.core import (
@@ -51,8 +52,6 @@ from antismash.modules.clusterblast.html_output import (
 NAME = "clusterblast"
 SHORT_DESCRIPTION = "Runs clusterblast over custom data"
 
-def regenerate_previous_results(*args, **kwargs):
-    return None
 
 def generate_html(region_layer: RegionLayer, results: ClusterBlastResults,
                   record_layer: RecordLayer, options_layer: OptionsLayer
